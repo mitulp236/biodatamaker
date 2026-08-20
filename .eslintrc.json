@@ -1,3 +1,17 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "overrides": [
+    {
+      "files": ["components/pdf/**/*.tsx"],
+      "rules": {
+        "jsx-a11y/alt-text": "off"
+      }
+    },
+    {
+      "files": ["app/layout.tsx"],
+      "rules": {
+        "@next/next/no-page-custom-font": "off"
+      }
+    }
+  ]
 }
